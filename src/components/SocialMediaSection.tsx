@@ -1,4 +1,6 @@
-import { Instagram, Facebook, Twitter, Youtube, Linkedin } from 'lucide-react';
+import { Instagram, Facebook, Twitter, Youtube, Linkedin, X } from 'lucide-react';
+import React, { useState } from 'react';
+import UnderConstruction from './UnderConstruction';
 
 // WhatsApp SVG icon using currentColor for fill/stroke
 const WhatsappIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -26,37 +28,58 @@ const socialLinks = [
     label: 'Instagram', 
     href: 'https://www.instagram.com/sru_drama_theatre_club/', 
     color: 'hover:bg-gradient-to-br hover:from-purple-500 hover:via-pink-500 hover:to-orange-400',
-    followers: '2.5K'
+    followers: '600',
+    underConstruction: false
   },
   {
     icon: WhatsappIcon,
     label: 'WhatsApp',
-    href: 'https://chat.whatsapp.com/your-group-link', // Replace with your actual group link
+    href: 'https://chat.whatsapp.com/KmJtwSvfsOaClWWiHG5Vxh', 
     color: 'hover:bg-[#25D366]',
-    followers: 'Join Group'
+    followers: 'Join Group',
+    underConstruction: false
   },
   { 
     icon: Youtube, 
     label: 'YouTube', 
-    href: 'https://youtube.com/@dramaclub', 
+    href: '',
     color: 'hover:bg-[#FF0000]',
-    followers: '3.2K'
+    followers: '',
+    underConstruction: true
   },
   { 
     icon: Linkedin, 
     label: 'LinkedIn', 
-    href: 'https://linkedin.com/company/dramaclub', 
+    href: '',
     color: 'hover:bg-[#0A66C2]',
-    followers: '500'
+    followers: '',
+    underConstruction: true
   },
 ];
 
 const SocialMediaSection = () => {
+  const [showModal, setShowModal] = useState<string | null>(null);
   return (
     <section className="py-16 md:py-24 bg-card relative overflow-hidden">
       {/* Spotlight effect */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent/10 blur-[100px] rounded-full pointer-events-none" />
-      
+
+      {/* Under Construction Modal */}
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+          <div className="relative bg-background rounded-xl shadow-lg p-0 max-w-xs w-full">
+            <button
+              className="absolute top-2 right-2 text-muted-foreground hover:text-accent"
+              onClick={() => setShowModal(null)}
+              aria-label="Close"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            <UnderConstruction />
+          </div>
+        </div>
+      )}
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Section header */}
         <div className="text-center mb-12">
@@ -74,27 +97,47 @@ const SocialMediaSection = () => {
 
         {/* Social media cards */}
         <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
-          {socialLinks.map(({ icon: Icon, label, href, color, followers }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`group relative flex flex-col items-center justify-center w-32 h-32 md:w-40 md:h-40 bg-secondary/50 border border-border/50 rounded-2xl transition-all duration-500 ${color} hover:border-transparent hover:scale-105 hover:shadow-2xl`}
-            >
-              <Icon className="w-10 h-10 md:w-12 md:h-12 text-muted-foreground group-hover:text-white transition-colors duration-300" />
-              <span className="mt-2 text-sm font-medium text-foreground group-hover:text-white transition-colors duration-300">
-                {label}
-              </span>
-              <span className="mt-1 text-xs text-muted-foreground group-hover:text-white/80 transition-colors duration-300">
-                {followers} followers
-              </span>
-              
-              {/* Shine effect */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-              </div>
-            </a>
+          {socialLinks.map(({ icon: Icon, label, href, color, followers, underConstruction }) => (
+            underConstruction ? (
+              <button
+                key={label}
+                type="button"
+                onClick={() => setShowModal(label)}
+                className={`group relative flex flex-col items-center justify-center w-32 h-32 md:w-40 md:h-40 bg-secondary/50 border border-border/50 rounded-2xl transition-all duration-500 ${color} hover:border-transparent hover:scale-105 hover:shadow-2xl focus:outline-none`}
+              >
+                <Icon className="w-10 h-10 md:w-12 md:h-12 text-muted-foreground group-hover:text-white transition-colors duration-300 mb-2" />
+                <span className="mt-2 text-sm font-medium text-foreground group-hover:text-white transition-colors duration-300">
+                  {label}
+                </span>
+                <span className="mt-1 text-xs text-muted-foreground group-hover:text-white/80 transition-colors duration-300">
+                  {followers} followers
+                </span>
+                {/* Shine effect */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                </div>
+              </button>
+            ) : (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group relative flex flex-col items-center justify-center w-32 h-32 md:w-40 md:h-40 bg-secondary/50 border border-border/50 rounded-2xl transition-all duration-500 ${color} hover:border-transparent hover:scale-105 hover:shadow-2xl`}
+              >
+                <Icon className="w-10 h-10 md:w-12 md:h-12 text-muted-foreground group-hover:text-white transition-colors duration-300" />
+                <span className="mt-2 text-sm font-medium text-foreground group-hover:text-white transition-colors duration-300">
+                  {label}
+                </span>
+                <span className="mt-1 text-xs text-muted-foreground group-hover:text-white/80 transition-colors duration-300">
+                  {followers} followers
+                </span>
+                {/* Shine effect */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                </div>
+              </a>
+            )
           ))}
         </div>
 

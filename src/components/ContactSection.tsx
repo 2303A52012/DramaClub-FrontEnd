@@ -147,7 +147,7 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
+              {/* <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5 text-primary-foreground" />
                 </div>
@@ -159,7 +159,7 @@ const ContactSection = () => {
                     University Avenue, City
                   </p>
                 </div>
-              </div>
+              </div> */}
 
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center shrink-0">
@@ -180,9 +180,9 @@ const ContactSection = () => {
               <div className="flex gap-4">
                 {[
                   { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/sru_drama_theatre_club/' },
-                  { icon: MessageCircle, label: 'WhatsApp', href: 'https://chat.whatsapp.com/your-group-link' },
-                  { icon: Linkedin, label: 'LinkedIn', href: '#' },
-                  { icon: Youtube, label: 'YouTube', href: '#' },
+                  { icon: MessageCircle, label: 'WhatsApp', href: 'https://chat.whatsapp.com/KmJtwSvfsOaClWWiHG5Vxh' },
+                  // { icon: Linkedin, label: 'LinkedIn', href: '#' },
+                  // { icon: Youtube, label: 'YouTube', href: '#' },
                 ].map(({ icon: Icon, label, href }) => (
                   <a
                     key={label}

@@ -28,13 +28,13 @@ const AboutSection = () => {
                 "Theatre is life. Film is art. Television is furniture."
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Founded in 1985, the Drama & Theatre Club began as a small group of passionate students 
+                The SRU Drama & Theatre Club began as a small group of passionate students 
                 who believed in the transformative power of storytelling. What started as informal 
                 gatherings in the college auditorium has grown into one of the most prestigious 
                 theatrical societies in the region.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Over four decades, we have staged over 200 productions, won numerous awards, and most 
+                we have staged over 20+ productions, won numerous awards, and most 
                 importantly, created a community where creativity knows no bounds. Our alumni include 
                 renowned actors, directors, and playwrights who continue to shape the world of theatre.
               </p>
@@ -90,10 +90,10 @@ const AboutSection = () => {
         {/* Stats */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { number: "40+", label: "Years of Legacy" },
-            { number: "200+", label: "Productions" },
+            { number: "5+", label: "Years of Legacy" },
+            { number: "20+", label: "Productions" },
             { number: "50+", label: "Awards Won" },
-            { number: "1000+", label: "Alumni Members" },
+            { number: "100+", label: "club Members" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="font-serif text-4xl md:text-5xl font-bold text-gradient-gold mb-2">
