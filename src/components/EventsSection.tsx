@@ -2,8 +2,9 @@ import { Calendar, Clock, Users, ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import eventImage from '@/assets/event-drama.jpg';
-import skitImage from '@/assets/skit.jpg';
+import skitImage from '@/assets/skit.png';
 import mm from '@/assets/mm.png';
+import spl from '@/assets/spl.png';
 
 interface Event {
   id: number;
@@ -48,7 +49,7 @@ const events: Event[] = [
     date: "Sparkrill Day 1 - January 24, 2025",
     time: "To be announced",
     type: "Fun & Interactive",
-    image: eventImage,
+    image: spl,
     description: "A lively interactive session featuring engaging games and screenings, designed to energize the audience and set the creative tone for Sparkrill.",
     registerLink: "",
     volunteerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfvklFKKzRJ_tHr_42ryUcsrRjqg1EuSdojIAVWTjP1fdr7eA/viewform?usp=header" 

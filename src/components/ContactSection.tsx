@@ -142,7 +142,7 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-serif text-lg font-bold text-foreground mb-1">Email Us</h4>
                   <a href="mailto:dramaclub@college.edu" className="text-muted-foreground hover:text-accent transition-colors">
-                    dramaclub@college.edu
+                    2502a71028@sru.edu.in
                   </a>
                 </div>
               </div>
@@ -167,8 +167,8 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-serif text-lg font-bold text-foreground mb-1">Call Us</h4>
-                  <a href="tel:+1234567890" className="text-muted-foreground hover:text-accent transition-colors">
-                    +1 (234) 567-890
+                  <a href="tel:9676249100" className="text-muted-foreground hover:text-accent transition-colors">
+                    +91 96762 49100
                   </a>
                 </div>
               </div>
