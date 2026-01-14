@@ -2,6 +2,8 @@ import { Calendar, Clock, Users, ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import eventImage from '@/assets/event-drama.jpg';
+import skitImage from '@/assets/skit.jpg';
+import mm from '@/assets/mm.png';
 
 interface Event {
   id: number;
@@ -12,45 +14,44 @@ interface Event {
   image: string;
   featured?: boolean;
   description: string;
+  registerLink: string;
+  volunteerLink: string;
 }
 
 const events: Event[] = [
   {
     id: 1,
-    title: "Annual Drama Festival 2025",
-    date: "January 15, 2025",
-    time: "6:00 PM",
-    type: "Festival",
-    image: eventImage,
+    title: "Sparkill'26 stage Drama ",
+    date: "Sparkrill Day 3 - January 26, 2026",
+    time: "During Pronight",
+    type: "Surprise Stage Performance",
+    image: skitImage,
     featured: true,
-    description: "Our flagship event featuring performances from all drama societies across the region."
+    description: "The stage awaits its final moment. An unannounced performance will unfold during Pronight — powerful, unexpected, and unforgettable. Be present to witness it.",
+    registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSczUWN--oV9KKXOgm86S6FTgaedXsl-gsdDcJcv_wWsDJmZGQ/viewform?usp=header",
+    volunteerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfvklFKKzRJ_tHr_42ryUcsrRjqg1EuSdojIAVWTjP1fdr7eA/viewform?usp=header" 
   },
   {
     id: 2,
-    title: "Shakespeare Night",
-    date: "January 28, 2025",
-    time: "7:00 PM",
-    type: "Performance",
-    image: eventImage,
-    description: "An evening dedicated to the timeless works of William Shakespeare."
+    title: "Murder Mystery",
+    date: "Sparkrill Day 2 - January 25, 2026",
+    time: "2 Hours",
+    type: "Competition",
+    image: mm,
+    description: "A team-based investigative competition where participants solve a gripping murder case using logic, clues, and collaboration. No acting required — only sharp reasoning and fair play.",
+    registerLink:"https://docs.google.com/forms/d/e/1FAIpQLScnW3R3bMT9V2tyAZUMd6WapAVFx1Zs-EIZsPfyj23OZqHZ5w/viewform?usp=header",
+    volunteerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfvklFKKzRJ_tHr_42ryUcsrRjqg1EuSdojIAVWTjP1fdr7eA/viewform?usp=header" 
   },
   {
     id: 3,
-    title: "Acting Workshop",
-    date: "February 5, 2025",
-    time: "3:00 PM",
-    type: "Workshop",
+    title: "Spotlight Arena",
+    date: "Sparkrill Day 1 - January 24, 2025",
+    time: "To be announced",
+    type: "Fun & Interactive",
     image: eventImage,
-    description: "Master the art of expression with our professional acting coaches."
-  },
-  {
-    id: 4,
-    title: "Open Mic Theatre",
-    date: "February 12, 2025",
-    time: "5:00 PM",
-    type: "Open Event",
-    image: eventImage,
-    description: "Your stage, your story. Showcase your talent in our open mic session."
+    description: "A lively interactive session featuring engaging games and screenings, designed to energize the audience and set the creative tone for Sparkrill.",
+    registerLink: "",
+    volunteerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfvklFKKzRJ_tHr_42ryUcsrRjqg1EuSdojIAVWTjP1fdr7eA/viewform?usp=header" 
   },
 ];
 
@@ -103,14 +104,18 @@ const EventCard = ({ event }: { event: Event }) => {
 
         {/* Action buttons */}
         <div className="mt-auto flex flex-wrap gap-2">
-          <Button variant="hero" size="sm" className="flex-1">
-            Register
-            <ArrowRight className="w-4 h-4" />
-          </Button>
-          <Button variant="dramatic" size="sm" className="flex-1">
-            <Users className="w-4 h-4" />
-            Volunteer
-          </Button>
+          <Button asChild variant="hero" size="sm" className="flex-1">
+  <a href={event.registerLink} target="_blank" rel="noopener noreferrer">
+    Register
+    <ArrowRight className="w-4 h-4" />
+  </a>
+</Button>
+<Button asChild variant="dramatic" size="sm" className="flex-1">
+  <a href={event.volunteerLink} target="_blank" rel="noopener noreferrer">
+    <Users className="w-4 h-4" />
+    Volunteer
+  </a>
+</Button>
         </div>
       </CardContent>
     </Card>

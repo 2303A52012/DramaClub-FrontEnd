@@ -17,9 +17,8 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="flex items-center gap-1 text-muted-foreground text-sm">
-            <span>© {currentYear} Drama & Theatre Club. Made with</span>
-            <Heart className="w-4 h-4 text-primary fill-primary" />
-            <span>for the arts.</span>
+            <span>© {currentYear} Drama & Theatre Club. Made by Lalith Prakash</span>
+            {/* <Heart className="w-4 h-4 text-primary fill-primary" /> */}
           </div>
 
           {/* Quick links */}
