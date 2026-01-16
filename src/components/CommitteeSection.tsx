@@ -2,6 +2,15 @@
 import { Mail, Instagram, Linkedin } from 'lucide-react';
 import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogClose } from "./ui/dialog";
 import React, { useState } from "react";
+import p from '@/assets/NethraDave.jpg';
+import vp from '@/assets/PRANAVASAIS.jpeg';
+import s from '@/assets/HarshithaKodati.jpg';
+import js from '@/assets/BOORAANUROOP.png';
+import t from '@/assets/rahulgurrala.jpg';
+import prh from '@/assets/AjayRangu.jpg';
+import prt from '@/assets/LavanyaNaganaboina.jpg';
+import sh1 from '@/assets/SaiAnurathEshwarapragada.jpg';
+import sh2 from '@/assets/PalakurthiLalithPrakash.jpeg';
 
 interface Member {
   id: number;
@@ -19,7 +28,7 @@ const committeeMembers: Member[] = [
     id: 1,
     name: "Nethra Dave",
     role: "President",
-    image: "src/assets/NethraDave.jpg",
+    image: p,
     email: "nethradev0807@gmail.com",
     instagram: "https://www.instagram.com/navy_kira?igsh=NGh5MHNtYWxuNHpo",
     linkedin: "https://www.linkedin.com/in/dave-nethra-40a31b37a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -29,7 +38,7 @@ const committeeMembers: Member[] = [
     id: 2,
     name: "S.PRANAVASAI",
     role: "Vice President",
-    image: "src/assets/PRANAVASAIS.jpeg",
+    image: vp,
     email: "siddanthipranavasai@gmail.com",
     instagram: "https://www.instagram.com/pranavasai.s?igsh=MW1mc2Fsd3NlaGNqbw%3D%3D&utm_source=qr",
     linkedin: "https://www.linkedin.com/in/siddanthi-pranavasai-953461287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
@@ -39,7 +48,7 @@ const committeeMembers: Member[] = [
     id: 3,
     name: "Harshitha Kodati",
     role: "Secretary",
-    image: "src/assets/HarshithaKodati.jpg",
+    image: s,
     email: "2403A54004@sru.edu.in",
     linkedin: "https://www.linkedin.com/in/harshitha-rao-kodati-2b7a7a338?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     info: "Rahul manages all documentation and ensures smooth communication within the club."
@@ -48,7 +57,7 @@ const committeeMembers: Member[] = [
     id: 4,
     name: "Boora Anuroop  Goud",
     role: "Joint secretary and social media Head",
-    image: "src/assets/BOORAANUROOP.png",
+    image: js,
     email: "2505a11052@sru.edu.in",
     instagram: "https://www.instagram.com/anuroopgoud22?igsh=cjA1NmxqaWlvb3Y2&utm_source=qr",
     linkedin: "https://www.linkedin.com/in/boora-anuroop-0a13a3390?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
@@ -58,7 +67,7 @@ const committeeMembers: Member[] = [
     id: 5,
     name: "Rahul",
     role: "Treasurer",
-    image: "src/assets/rahulgurrala.jpg",
+    image: t,
     email: "rahulgurrala01@gmail.com",
     instagram: "#",
     linkedin: "#",
@@ -68,7 +77,7 @@ const committeeMembers: Member[] = [
     id: 6,
     name: "Rangu Ajay",
     role: "PR Head",
-    image: "src/assets/AjayRangu.jpg",
+    image: prh,
     email: "2303A51072@sru.edu.in",
     instagram: "https://www.instagram.com/mr_ranguajay/",
     linkedin: "https://www.linkedin.com/in/rangu-ajay-b46895227?utm_source=share_via&utm_content=profile&utm_medium=member_android",
@@ -78,7 +87,7 @@ const committeeMembers: Member[] = [
     id: 7,
     name: "Lavanya Naganaboina",
     role: "PR & marketing team member",
-    image: "src/assets/LavanyaNaganaboina.jpg",
+    image: prt,
     email: "naganaboinalavanya8@gmail.com",
     instagram: "https://www.instagram.com/lavanya_naganaboina?igsh=MWM2N2UwMDE0emY5Nw==",
     linkedin: "https://www.linkedin.com/in/naganaboina-lavanya-b823a930a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -88,7 +97,7 @@ const committeeMembers: Member[] = [
     id: 8,
     name: "E.SAI ANURATH",
     role: "SCRIPTING HEAD",
-    image: "src/assets/SaiAnurathEshwarapragada.jpg",
+    image: sh1,
     email: "saianurath7779@gmail.com",
     instagram: "https://www.instagram.com/anurath_anni_206",
     linkedin: "https://www.linkedin.com/in/sai-anurath-eshwarapragada-220714287",
@@ -98,7 +107,7 @@ const committeeMembers: Member[] = [
     id: 9,
     name: "P.lalith prakash",
     role: "SCRIPTING HEAD",
-    image: "src/assets/PalakurthiLalithPrakash.jpeg",
+    image: sh2,
     email: "palakurthilallu65039@gmail.com",
     instagram: "https://www.instagram.com/palakurthi_lallu/",
     linkedin: "https://www.linkedin.com/in/palakurthi-lalith-prakash/",
