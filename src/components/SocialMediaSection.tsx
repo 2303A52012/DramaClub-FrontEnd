@@ -60,7 +60,7 @@ const socialLinks = [
 const SocialMediaSection = () => {
   const [showModal, setShowModal] = useState<string | null>(null);
   return (
-    <section className="py-16 md:py-24 bg-card relative overflow-hidden">
+    <section id="SocialMediaSection" className="py-16 md:py-24 bg-card relative overflow-hidden">
       {/* Spotlight effect */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent/10 blur-[100px] rounded-full pointer-events-none" />
 
