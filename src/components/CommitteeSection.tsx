@@ -20,7 +20,6 @@ interface Member {
   email: string;
   instagram?: string;
   linkedin?: string;
-  info?: string;
 }
 
 const committeeMembers: Member[] = [
@@ -31,8 +30,7 @@ const committeeMembers: Member[] = [
     image: p,
     email: "nethradev0807@gmail.com",
     instagram: "https://www.instagram.com/navy_kira?igsh=NGh5MHNtYWxuNHpo",
-    linkedin: "https://www.linkedin.com/in/dave-nethra-40a31b37a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    info: "Anuthar is the visionary leader of the club, ensuring every production is a success and every member feels valued."
+    linkedin: "https://www.linkedin.com/in/dave-nethra-40a31b37a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
   {
     id: 2,
@@ -41,8 +39,7 @@ const committeeMembers: Member[] = [
     image: vp,
     email: "siddanthipranavasai@gmail.com",
     instagram: "https://www.instagram.com/pranavasai.s?igsh=MW1mc2Fsd3NlaGNqbw%3D%3D&utm_source=qr",
-    linkedin: "https://www.linkedin.com/in/siddanthi-pranavasai-953461287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    info: "Priya coordinates between teams and brings creative ideas to life, supporting the president in all club activities."
+    linkedin: "https://www.linkedin.com/in/siddanthi-pranavasai-953461287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
   },
   {
     id: 3,
@@ -50,8 +47,7 @@ const committeeMembers: Member[] = [
     role: "Secretary",
     image: s,
     email: "2403A54004@sru.edu.in",
-    linkedin: "https://www.linkedin.com/in/harshitha-rao-kodati-2b7a7a338?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    info: "Rahul manages all documentation and ensures smooth communication within the club."
+    linkedin: "https://www.linkedin.com/in/harshitha-rao-kodati-2b7a7a338?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
   {
     id: 4,
@@ -60,8 +56,7 @@ const committeeMembers: Member[] = [
     image: js,
     email: "2505a11052@sru.edu.in",
     instagram: "https://www.instagram.com/anuroopgoud22?igsh=cjA1NmxqaWlvb3Y2&utm_source=qr",
-    linkedin: "https://www.linkedin.com/in/boora-anuroop-0a13a3390?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    info: "Ananya leads the creative team, designing sets and costumes that bring stories to life on stage."
+    linkedin: "https://www.linkedin.com/in/boora-anuroop-0a13a3390?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
   },
   {
     id: 5,
@@ -69,9 +64,8 @@ const committeeMembers: Member[] = [
     role: "Treasurer",
     image: t,
     email: "rahulgurrala01@gmail.com",
-    instagram: "#",
-    linkedin: "#",
-    info: "Vikram organizes and manages all club events, ensuring everything runs on schedule."
+    instagram: "https://www.instagram.com/rahul_devadanam07/",
+    linkedin: "#"
   },
   {
     id: 6,
@@ -80,8 +74,7 @@ const committeeMembers: Member[] = [
     image: prh,
     email: "2303A51072@sru.edu.in",
     instagram: "https://www.instagram.com/mr_ranguajay/",
-    linkedin: "https://www.linkedin.com/in/rangu-ajay-b46895227?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-    info: "Sneha handles public relations and outreach, connecting the club with the community and media."
+    linkedin: "https://www.linkedin.com/in/rangu-ajay-b46895227?utm_source=share_via&utm_content=profile&utm_medium=member_android"
   },
   {
     id: 7,
@@ -90,8 +83,7 @@ const committeeMembers: Member[] = [
     image: prt,
     email: "naganaboinalavanya8@gmail.com",
     instagram: "https://www.instagram.com/lavanya_naganaboina?igsh=MWM2N2UwMDE0emY5Nw==",
-    linkedin: "https://www.linkedin.com/in/naganaboina-lavanya-b823a930a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    info: "Sneha handles public relations and outreach, connecting the club with the community and media."
+    linkedin: "https://www.linkedin.com/in/naganaboina-lavanya-b823a930a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
   {
     id: 8,
@@ -100,8 +92,7 @@ const committeeMembers: Member[] = [
     image: sh1,
     email: "saianurath7779@gmail.com",
     instagram: "https://www.instagram.com/anurath_anni_206",
-    linkedin: "https://www.linkedin.com/in/sai-anurath-eshwarapragada-220714287",
-    info: "Sneha handles public relations and outreach, connecting the club with the community and media."
+    linkedin: "https://www.linkedin.com/in/sai-anurath-eshwarapragada-220714287"
   },
   {
     id: 9,
@@ -110,8 +101,7 @@ const committeeMembers: Member[] = [
     image: sh2,
     email: "palakurthilallu65039@gmail.com",
     instagram: "https://www.instagram.com/palakurthi_lallu/",
-    linkedin: "https://www.linkedin.com/in/palakurthi-lalith-prakash/",
-    info: "Sneha handles public relations and outreach, connecting the club with the community and media."
+    linkedin: "https://www.linkedin.com/in/palakurthi-lalith-prakash/"
   },
 ];
 
